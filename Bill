@@ -1,0 +1,42 @@
+Imports Microsoft.VisualBasic
+
+Public Class Bill
+
+    ' Variables
+    Private BillName As String
+    Private TotalPrice As Double
+    Private TableID As Table
+    Private ItemList[] As Item 'Will be added in later
+
+    Sub New(name As String, price As Double, table As Table)
+        BillName = name
+        TotalPrice = price
+        TableID = table
+    End Sub
+
+    Sub setName(name As String)
+        BillName = name
+    End Sub
+
+    Sub setTotal(price As Double)
+        TotalPrice = price
+    End Sub
+
+    Sub setTableID(table As Table)
+        TableID = table
+    End Sub
+
+    Function getName() As String
+        Return BillName
+    End Function
+
+    Function getTotal() As Double
+        Return TotalPrice
+    End Function
+
+    Function getTable() As Table
+        Return TableID
+    End Function
+
+
+End Class
