@@ -1,0 +1,58 @@
+Imports Microsoft.VisualBasic
+
+Public Class Bill
+
+    ' Variables
+    Private BillName As String
+    Private TotalPrice As Double
+    Private TableID As Table
+    Private ItemList As ArrayList
+
+    'Constructor of Bill Class
+    Sub New(name As String, table As Table)
+        BillName = name
+        TotalPrice = 0.00
+        TableID = table
+    End Sub
+
+    Sub setName(name As String)
+        BillName = name
+    End Sub
+
+    Sub setTotal(price As Double)
+        TotalPrice = price
+    End Sub
+
+    Sub setTableID(table As Table)
+        TableID = table
+    End Sub
+
+    Sub addItem(newItem As Item) 'WIP
+        For Each item As Item In ItemList
+            If item.ItemName = newItem.ItemName Then item.
+        Next
+        ItemList.Add(newItem)
+    End Sub
+
+    Sub removeItem(item As Item)
+        ItemList.Remove(item)
+    End Sub
+
+    Function getName() As String
+        Return BillName
+    End Function
+
+    Function getTotal() As Double
+        Return TotalPrice
+    End Function
+
+    Function getTable() As Table
+        Return TableID
+    End Function
+
+    Function getList() As Item
+        'Coming Soon to a theatre near you
+        Return
+    End Function
+
+End Class
