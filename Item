@@ -4,6 +4,7 @@ Public Class Item
     Private ItemPrice As Double
     Private Description As String
     Private Category As String
+    Private ItemQuantity As Integer
 
     Sub New(name As String, price As Double, about As String, categ As String)
         ItemName = name
@@ -19,7 +20,7 @@ Public Class Item
     Sub setPrice(price As Double)
         ItemPrice = price
     End Sub
-
+    
     Sub setDescription(about As String)
         Description = about
     End Sub
@@ -27,6 +28,14 @@ Public Class Item
     Sub setCategory(categ As String)
         Category = categ
     End Sub
+    
+    Sub setQuantity(quantity as Integer)
+        ItemQuantity = quantity
+    End Sub
+    
+    Function getQuantity() As Integer
+        Return ItemQuantiy
+    End Function
 
     Function getName() As String
         Return ItemName
